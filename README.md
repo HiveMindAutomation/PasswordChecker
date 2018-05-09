@@ -3,5 +3,5 @@ BASH Script to check password Expiry and trigger a JAMF Helper notice to warn th
 
 Variables have been created to customise the messages, AD Domain, Logo Path, Button Labels, and the Default Button
 
-![an example of the popup](https://github.com/DJStuey/PasswordChecker/raw/master/src/common/images/Sample1.png "Sample Window")
-![an example of the popup](https://github.com/DJStuey/PasswordChecker/raw/master/src/common/images/Sample2.png "Confirm Ignore Window")
+![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample1.png "Sample Window")
+![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample2.png "Confirm Ignore Window")
