@@ -11,6 +11,7 @@ PWNotify=14
 Domain="IGS"
 
 ###################### Get Password Expiry ########################
+################## AVOID MODIFYING THIS SECTION ###################
 #get Last Password change from DSCL
 MSLastPWD=`dscl "/Active Directory/$Domain/All Domains" -read /Users/$CurrentUser | grep -i SMBPasswordLastSet | cut -d ' ' -f 2 | sed q`
 #get today's date in Unix time
@@ -27,6 +28,7 @@ expireDays=$((PWPolicy - diffDays ))
 #echo $expireDays
 
 ###################### User Interface ########################
+############## Modify this section as needed #################
 #Path on local machine where the logo is stored
 logoPath="/Users/Shared/.profiles/Crest 4x6.png"
 #Title of the Window
