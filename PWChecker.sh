@@ -29,7 +29,6 @@ expireDays=$((PWPolicy - diffDays ))
 ###################### User Interface ########################
 #Path on local machine where the logo is stored
 logoPath="/Users/Shared/.profiles/Crest 4x6.png"
-
 #Title of the Window
 windowTitle="Ivanhoe Grammar School - IT Services"
 #Heading of the Window
