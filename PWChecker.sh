@@ -39,4 +39,6 @@ fi
 if [[ $RESULT2 = 2 ]]; then
   #open System Preferences -> Accounts preference pane
   sudo -u $CurrentUser open /System/Library/PreferencePanes/Accounts.prefPane
+elif [[ $RESULT2 = 0 ]]; then
+  #inject log file to JSS
 fi
