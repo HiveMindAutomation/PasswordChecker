@@ -2,7 +2,12 @@
 ###################### Get current user ########################
 
 CurrentUser=`ls -l /dev/console | cut -d " " -f4`
+IDNum=`id -u $CurrentUser`
 
+if [[ $IDNum -lt 1000 ]]; then
+  echo "Not a Network User Account. Exiting."
+  exit 1
+fi
 #set Password Policy
 PWPolicy=59
 #set Password Notification period
