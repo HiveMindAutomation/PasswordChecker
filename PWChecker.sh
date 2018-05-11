@@ -37,7 +37,6 @@ expireDays=$((PWPolicy - diffDays ))
 #echo $expireDays
 ##############################################################
 
-
 ###################### User Interface ########################
 ############## Modify this section as needed #################
 #Path on local machine where the logo is stored
@@ -62,11 +61,26 @@ Button2Label="Change Now"
 
 #Default Button. 0 is "Ignore", 2 is "Change Now"
 DefaultButton=0
+
+ADErrorHeading="Something went wrong with Active Directory"
+ADErrorText="Active Directory Not Contactable.
+Please check your settings and try again.
+
+[Info: Domain variable is currently: \"$Domain\"] on line 19"
 ##############################################################
 
 ##############################################################
 #Avoid Modifying the script below this line
 ##############################################################
+#Bomb out if AD Bind is busted
+if [[ $MSLastPWD == "" ]]; then
+  windowHeading=$ADErrorHeading
+  windowText=$ADErrorText
+  Button1Label="Oh No!"
+  "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" -windowType utility -title "$windowTitle" -heading "$windowHeading" -alignHeading center -description "$windowText" -alignDescription center -icon "$logoPath" -button1 "$Button1Label" -defaultButton $DefaultButton -cancelButton 0 -lockHUD
+  exit 1
+fi
+
 #Determine if Days until Expiry is less than the Notification period
 if [[ $expireDays -le $PWNotify ]]; then
   #Prompt User that their password is due to expire soon
