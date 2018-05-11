@@ -21,9 +21,9 @@ Variable `Button2Label` changes the label on the "Change Now" button.
 
 
 ## Screenshots
-If the `PWExpiry` value is Less than the `PWNotify` value, the user will receive this prompt.
-![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample1.png "Sample Window")
-When a User Ignores the first prompt, they are presented with an "Are you sure?" prompt
-![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample2.png "Confirm Ignore Window")
-Active Directory Bind Error Window
+If the `PWExpiry` value is Less than the `PWNotify` value, the user will receive this prompt.  
+![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample1.png "Sample Window")  
+When a User Ignores the first prompt, they are presented with an "Are you sure?" prompt.  
+![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample2.png "Confirm Ignore Window")  
+Active Directory Bind Error Window.  
 ![Popup to warn of AD Bind Errors](https://github.com/DJStuey/PasswordChecker/blob/master/Sample3.png "AD Error")
