@@ -63,10 +63,12 @@ Button2Label="Change Now"
 DefaultButton=0
 
 ADErrorHeading="Something went wrong with Active Directory"
-ADErrorText="Active Directory Not Contactable.
-Please check your settings and try again.
+ADErrorText="Something went wrong with Active Directory"
+ADErrorText="IT Services have detected a configuration problemo on your computer.
+Please contact IT Services ASAP to arrange a fix for this issue
 
-[Info: Domain variable is currently: \"$Domain\"] on line 19"
+[for IT Services: Check AD Bind]"
+ADErrorButton="Oh no!"
 ##############################################################
 
 ##############################################################
@@ -76,7 +78,7 @@ Please check your settings and try again.
 if [[ $MSLastPWD == "" ]]; then
   windowHeading=$ADErrorHeading
   windowText=$ADErrorText
-  Button1Label="Oh No!"
+  Button1Label=$ADErrorButton
   "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" -windowType utility -title "$windowTitle" -heading "$windowHeading" -alignHeading center -description "$windowText" -alignDescription center -icon "$logoPath" -button1 "$Button1Label" -defaultButton $DefaultButton -cancelButton 0 -lockHUD
   exit 1
 fi

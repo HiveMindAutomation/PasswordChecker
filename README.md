@@ -3,6 +3,8 @@ BASH Script to check password Expiry and trigger a JAMF Helper notice to warn th
 
 Variables have been created to customise the messages, AD Domain, Logo Path, Button Labels, and the Default Button
 
+Accounts with UserID's less than 1000 are ignored so it will only report for Network Accounts.
+
 ### Customisation
 
 Variable `PWPolicy` is your password Expiry in # of Days (-1) Change this variable as needed. Set to 60 Days for my environment.  
@@ -19,5 +21,9 @@ Variable `Button2Label` changes the label on the "Change Now" button.
 
 
 ## Screenshots
+If the `PWExpiry` value is Less than the `PWNotify` value, the user will receive this prompt.
 ![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample1.png "Sample Window")
+When a User Ignores the first prompt, they are presented with an "Are you sure?" prompt
 ![an example of the popup](https://github.com/DJStuey/PasswordChecker/blob/master/Sample2.png "Confirm Ignore Window")
+Active Directory Bind Error Window
+![Popup to warn of AD Bind Errors](https://github.com/DJStuey/PasswordChecker/blob/master/Sample3.png "AD Error")
