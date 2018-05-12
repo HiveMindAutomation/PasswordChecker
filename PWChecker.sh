@@ -16,7 +16,7 @@ PWPolicy=59
 #set Password Notification period
 PWNotify=14
 #Active Directory Domain - Set this to YOUR Active Directory Domain
-Domain="IGS"
+Domain=`echo show com.apple.opendirectoryd.ActiveDirectory | scutil | grep DomainNameFlat | awk '{print $3}'`
 ##############################################################
 
 ###################### Get Password Expiry ########################
