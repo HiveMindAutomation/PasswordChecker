@@ -64,7 +64,6 @@ Button2Label="Change Now"
 DefaultButton=0
 
 ADErrorHeading="Something went wrong with Active Directory"
-ADErrorText="Something went wrong with Active Directory"
 ADErrorText="IT Services have detected a configuration problem on your computer.
 Please contact IT Services ASAP to arrange a fix for this issue
 
