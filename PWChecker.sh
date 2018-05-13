@@ -67,7 +67,7 @@ ADErrorHeading="Something went wrong with Active Directory"
 ADErrorText="IT Services have detected a configuration problem on your computer.
 Please contact IT Services ASAP to arrange a fix for this issue
 
-[for IT Services: Check AD Bind]"
+[for IT Services: Check AD Bind $Domain]"
 ADErrorButton="Oh no!"
 ##############################################################
 
